@@ -21,7 +21,7 @@ Shortcuts:
 <ctrl> + c = copy data to clipboard
 <ctrl> + t = toggle tabs
 
-GraphGrabber is © 2000 - 2016 P.J. van der Wolk. You may use it under GPL3.
+GraphGrabber is © 1996 - 2016 P.J. van der Wolk. You may use it under the clear BSD licence.
 
 On the programming:
 GraphGrabber is written in Borland Delphi. If you have any comments, requests, etc. e-mail me. If you have suggestions to improve these very limited instructions, e-mail me.
