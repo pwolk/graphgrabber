@@ -1,4 +1,4 @@
-﻿unit main;
+unit main;
 
 {$mode objfpc}{$H+}
 
@@ -47,6 +47,12 @@ interface
 //non-perpendicular axes are not right
 // default values for axes
 // clear the memory of the bitmap
+
+//bug:
+{if you draw axes, fill everything out, and then digitise data,
+if you then return to the set axes mode, the axes values are read-only - done 18-10-2016}
+{help: goto webpage 18-10-2016}
+
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
@@ -144,7 +150,7 @@ Const
   strIni17       = 'YAxisIsLog      = FALSE';
   strIni18       = 'WriteFileNameInData = FALSE';
   iPenWidthFactor = 10;
-  strVersion     = 'Version 0.33';
+  strVersion     = 'Version 3.01';
 
 var
   fmMain: TfmMain;
@@ -233,7 +239,7 @@ begin
     if fBothAxesDefined = false then
     begin
       fKosher := false;
-      lstGrabbedData.lines.Add('(Define axes first)');
+      lstGrabbedData.lines.Add('(Please define axes first)');
     end;
   if fKosher then
   begin
@@ -272,6 +278,12 @@ begin
      btnSetAxes.caption := 'Set axes';
      fmMain.caption := 'Graph Grabber - define axes stage';
      fBothAxesDefined := false;
+     //make coordinates editable again
+     btnSetAxes.Checked := false;
+     edX1Origin.enabled :=true;
+     edY1Origin.enabled :=true;
+     edX1XAxis.enabled :=true;
+     edY2YAxis.enabled :=true;
    end;
 end;
 
@@ -403,7 +415,7 @@ procedure TfmMain.FormShow(Sender: TObject);
 procedure TfmMain.imgGraphClick(Sender: TObject);
    var
        fAllDataPresent : Boolean;
-       sglMu, sglLambda : single; //projection on e1 and e2 axis
+       //sglMu, sglLambda : single; //projection on e1 and e2 axis
 
    begin
      //select click
@@ -626,7 +638,7 @@ end;
 
 procedure TfmMain.MenuSaveClick(Sender: TObject);
    var
-     strOneLine, strTextFileName : string;
+     {strOneLine,} strTextFileName : string;
      txtSaveData : textfile;
    begin
      if SaveDialog1.execute then
