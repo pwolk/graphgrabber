@@ -17,9 +17,9 @@ Define the numerical value of the origin and the end points in the panel on the 
 Some default settings may be changed by editing the GraphGrabber.ini file, such as default open- and savedirectory, default numerical values for the axes, and the format of the output of coordinates. Good luck.
 
 Shortcuts:
-`<ctrl>` + d = delete all data
-`<ctrl>` + c = copy data to clipboard
-`<ctrl>` + t = toggle tabs
+* `<ctrl>` + d = delete all data
+* `<ctrl>` + c = copy data to clipboard
+* `<ctrl>` + t = toggle tabs
 
 GraphGrabber is © 1996 - 2016 P.J. van der Wolk. You may use it under the clear BSD licence.
 
