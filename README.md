@@ -25,7 +25,7 @@ Shortcuts:
 * `<ctrl>` + `c` = copy data to clipboard
 * `<ctrl>` + `t` = toggle tabs
 
-GraphGrabber is © 1996 - 2022 P.J. van der Wolk. You may use it under the clear BSD licence.
+GraphGrabber is © 1996 - 2023 P.J. van der Wolk. You may use it under the clear BSD licence.
 
 ## On the programming
 
