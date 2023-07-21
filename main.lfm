@@ -39,7 +39,7 @@ object fmMain: TfmMain
   OnKeyPress = FormKeyPress
   OnResize = FormResize
   OnShow = FormShow
-  LCLVersion = '1.4.4.0'
+  LCLVersion = '2.2.6.0'
   object RightPanel: TPanel
     Left = 666
     Height = 478
@@ -86,7 +86,7 @@ object fmMain: TfmMain
         Left = 12
         Height = 15
         Top = 20
-        Width = 32
+        Width = 33
         Caption = 'pixels:'
         ParentColor = False
       end
@@ -194,7 +194,7 @@ object fmMain: TfmMain
         Left = 208
         Height = 15
         Top = 11
-        Width = 33
+        Width = 35
         Caption = 'x max:'
         ParentColor = False
       end
@@ -202,7 +202,7 @@ object fmMain: TfmMain
         Left = 349
         Height = 15
         Top = 11
-        Width = 34
+        Width = 35
         Caption = 'y max:'
         ParentColor = False
       end
@@ -233,6 +233,7 @@ object fmMain: TfmMain
       end
     end
     object imgGraph: TImage
+      Cursor = crCross
       Left = 1
       Height = 374
       Top = 56
@@ -248,14 +249,14 @@ object fmMain: TfmMain
   object dlgOpenImage: TOpenDialog
     Filter = 'windows bitmap|*.bmp|jpeg|*.jpg;*.jpeg|gif|*.gif|tga|*.tga|All images|*.bmp;*.jpg;*.jpeg;*.gif;*.tga|All files|*.*'
     FilterIndex = 5
-    left = 40
+    Left = 40
   end
   object SaveDialog1: TSaveDialog
     Filter = 'text files|*.txt'
-    left = 72
+    Left = 72
   end
   object MainMenu1: TMainMenu
-    left = 8
+    Left = 8
     object MenuItem1: TMenuItem
       Caption = '&File'
       object btnOpenImage: TMenuItem
